@@ -1,6 +1,9 @@
 $primary-font: 'Helvetica', sans-serif;
 $header-font: 'Arial', serif;
-$primary-color: black;
+$header-font-color: rgb(10, 10, 10);
+$header-box-color:rgb(128, 128, 128);
+$div-box-color: rgb(26, 46, 65);
+$div-font-color: rgba(235, 186, 186, 0.673);
 
 body {
   font: 100%, $primary-font;
@@ -15,30 +18,25 @@ body {
 
 %header-grey-box {
   border-radius: 20px;
-  background-color: rgb(128, 128, 128);
-  opacity: 0.6;
+  background-color: $header-box-color;
+  opacity: 0.8;
 }
 
 %box {
   border-radius: 20px;
-  border: 2px, solid, #808080;
-  background-color: white;
+  background-color: $div-box-color;
   width: 40em;
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: $div-font-color;
   margin-top: 20px;
   margin-bottom:20px;
-}
-
-.button-inside-task-box{
-  margin-bottom: 10px;
 }
 
 h1,h2,h3,h4,h5 {
   @extend %middle-location;
   @extend %header-grey-box;
   font: $header-font;
-  color: $primary-color;
+  color: $header-font-color;
   width: 20em;
 }
 
